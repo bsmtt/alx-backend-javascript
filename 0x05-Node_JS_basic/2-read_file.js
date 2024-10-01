@@ -11,13 +11,13 @@ function countStudents(path) {
     const sData = data.toString().trim().split('\n');
     const fullData = sData.splice(1, data.length);
 
-    displayMessage(`Number of students: ${fullData.length}`);
+    console.log(`Number of students: ${fullData.length}`);
 
     const groups = new Set(fullData.map((item) => item.trim().split(',').at(-1)));
     for (const group of groups) {
       const filtered = filterByGroup(group, fullData);
       const firstNames = filtered.map((entry) => entry.split(',').at(0));
-      displayMessage(`Number of students in ${group}: ${filtered.length}. List: ${firstNames.join(', ')}`);
+      console.log(`Number of students in ${group}: ${filtered.length}. List: ${firstNames.join(', ')}`);
     }
   } catch (err) {
     throw new Error('Cannot load the database');
