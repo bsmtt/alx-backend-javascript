@@ -17,7 +17,7 @@ function countStudents(path) {
     for (const group of groups) {
       const filtered = filterByGroup(group, fullData);
       const firstNames = filtered.map((entry) => entry.split(',').at(0));
-      console.log(`Number of students in ${group}: ${filtered.length}. List: ${firstNames.join(', ')}`);
+      //console.log(`Number of students in ${group}: ${filtered.length}. List: ${firstNames.join(', ')}`);
     }
   } catch (err) {
     throw new Error('Cannot load the database');
