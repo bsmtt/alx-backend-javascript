@@ -1,9 +1,9 @@
 /**
- * 
- * @param {string} m 
+ *
+ * @param {string} m
  * @returns {void}
  */
-const displayMessage = (m) => console.log(m)
+const displayMessage = (m) => console.log(m);
 
 /**
  * Exports the displayMessage function.
